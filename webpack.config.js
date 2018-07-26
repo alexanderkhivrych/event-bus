@@ -6,6 +6,8 @@ module.exports = {
   output: {
     path: __dirname,
     filename: 'main.min.js',
+    libraryTarget: 'window',
+    libraryExport: 'default',
   },
   devtool: 'source-map',
   optimization: {
