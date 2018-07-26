@@ -1,5 +1,5 @@
 {
-  "name": "event-bus",
+  "name": "simple-eventing",
   "version": "0.0.2",
   "description": "event bus",
   "main": "main.min.js",
@@ -9,9 +9,6 @@
   "repository": {
     "url": "git+https://github.com/alexanderkhivrych/event-bus.git",
     "type": "git"
-  },
-  "publishConfig": {
-    "registry": "https://nexus.newage.io/repository/hrzn-npm/"
   },
   "author": "Alexander Khivrych",
   "license": "MIT",
@@ -30,6 +27,11 @@
     "webpack-cli": "^3.0.6"
   },
   "keywords": [
-    "event-bus"
-  ]
+    "event-bus",
+    "event",
+    "bus"
+  ],
+  "bugs": {
+    "url": "https://github.com/alexanderkhivrych/event-bus/issues"
+  }
 }
