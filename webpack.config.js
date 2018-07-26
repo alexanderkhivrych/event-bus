@@ -1,6 +1,5 @@
 const path = require('path');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
-const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
 
 module.exports = {
   mode: 'production',
@@ -8,37 +7,13 @@ module.exports = {
   output: {
     path: __dirname,
     filename: 'main.min.js',
-    libraryTarget: 'commonjs'
+    libraryTarget: 'commonjs',
+    library: '',
   },
   devtool: 'source-map',
   optimization: {
-    minimizer: [
-      new UglifyJsPlugin({
-        cache: true,
-        parallel: true,
-        uglifyOptions: {
-          ecma: 8,
-          compress: {
-            unused: true,
-            dead_code: true,
-            pure_getters: false,
-            warnings: false,
-            conditionals: true,
-            comparisons: true,
-            sequences: true,
-            evaluate: true,
-            join_vars: true,
-            if_return: true,
-          },
-          output: {
-            comments: false,
-          },
-          mangle: {
-            safari10: true,
-          },
-        },
-      }),
-    ],
+    minimize: true,
+    namedModules: true
   },
   module: {
     rules: [
