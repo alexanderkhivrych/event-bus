@@ -6,7 +6,7 @@ module.exports = {
   output: {
     path: __dirname,
     filename: 'main.min.js',
-    libraryExport: 'default'
+    libraryTarget: 'umd'
   },
   devtool: 'source-map',
   optimization: {
