@@ -57,4 +57,4 @@ if (!window.EventBus) {
   window.EventBus = eventBus;
 }
 
-export default window.EventBus;
+module.exports = window.EventBus;

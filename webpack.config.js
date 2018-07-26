@@ -2,13 +2,10 @@ const path = require('path');
 
 module.exports = {
   mode: 'production',
-  target: 'web',
   entry: path.resolve(__dirname, 'index.js'),
   output: {
     path: __dirname,
     filename: 'main.min.js',
-    libraryTarget: 'window',
-    libraryExport: 'default',
   },
   devtool: 'source-map',
   optimization: {
