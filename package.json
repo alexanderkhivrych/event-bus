@@ -1,6 +1,6 @@
 {
   "name": "simple-eventing",
-  "version": "0.0.6",
+  "version": "0.0.7",
   "description": "event bus",
   "main": "main.min.js",
   "scripts": {
