@@ -1,3 +1,6 @@
 node_modules/*
 yarn.lock
 .idea
+main.min.js
+main.min.js.map
+
