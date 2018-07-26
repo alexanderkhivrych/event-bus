@@ -8,6 +8,7 @@ module.exports = {
   output: {
     path: __dirname,
     filename: 'main.min.js',
+    libraryTarget: 'commonjs'
   },
   devtool: 'source-map',
   optimization: {
