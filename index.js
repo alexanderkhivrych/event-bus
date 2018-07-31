@@ -31,10 +31,16 @@ class EventBus {
   }
 
   on(eventName, id, cb, once) {
-    this.listeners.create(eventName, id, cb);
+    const eventNames = Array.isArray(eventName) ? [...eventName] : [eventName];
+
+    eventNames.forEach((name) => {
+      this.listeners.create(name, id, cb);
+    });
 
     if (once) {
-      this.unsubscribe(eventName, id);
+      eventNames.forEach((name) => {
+        this.unsubscribe(name, id);
+      });
     }
   }
 
