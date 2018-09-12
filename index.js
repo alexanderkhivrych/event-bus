@@ -16,7 +16,7 @@ class Listeners {
 
   fire(eventName, data) {
     if (!this.list[eventName]) {
-      throw `Event "${eventName}" is not registered!`;
+      console.warn(`Event "${eventName}" is not registered!`);
     }
 
     Object.keys(this.list[eventName]).forEach(id => {
